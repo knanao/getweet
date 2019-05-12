@@ -2,7 +2,9 @@ import { applyMiddleware, createStore } from "redux";
 
 import { createLogger } from "redux-logger";
 import thunk from "redux-thunk";
-import promise from "redux-promise-middleware";
+// import promise from "redux-promise-middleware";
+import { createPromise } from 'redux-promise-middleware';
+const promise = createPromise({ types: { fulfilled: 'success' } });
 
 import reducer from "./reducers";
 
