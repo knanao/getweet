@@ -11,7 +11,12 @@ export default function reducer(state = {
 
     switch (action.type) {
         case "FETCH_USER": {
-            return { ...state, fetching: true };
+            return {
+                ...state,
+                fetching: false,
+                fetched: true,
+                user: action.payload
+            };
         }
         // ToDo
     }
